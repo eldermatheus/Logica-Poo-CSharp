@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExercicioPonto3D", "ExercicioPonto3D.csproj", "{E8A01BB6-FC1D-4E77-9EFC-D19AA9459F0A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E8A01BB6-FC1D-4E77-9EFC-D19AA9459F0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8A01BB6-FC1D-4E77-9EFC-D19AA9459F0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8A01BB6-FC1D-4E77-9EFC-D19AA9459F0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8A01BB6-FC1D-4E77-9EFC-D19AA9459F0A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5CE11263-44E5-4AAD-B7D3-2F2CCC19CAAB}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,3 @@
+﻿using Teste;
+
+MetodosComRetorno.Executar();
