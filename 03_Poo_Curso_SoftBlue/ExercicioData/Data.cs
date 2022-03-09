@@ -34,8 +34,6 @@ namespace ExercicioData
             if (formato == "FORMATO_12H")
             {
                 Console.WriteLine($"10 / 3 / 2000 10:30:10");
-
-
             }
 
             else { 
