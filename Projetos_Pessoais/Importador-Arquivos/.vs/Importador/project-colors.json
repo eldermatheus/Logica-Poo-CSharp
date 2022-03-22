@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "7ae7371d-54fa-42f9-9013-50b4b27548c5": {
+      "ProjectGuid": "7ae7371d-54fa-42f9-9013-50b4b27548c5",
+      "DisplayName": "Importador",
+      "ColorIndex": 0
+    },
+    "054fd71c-eb4c-4c1f-bd08-246cc498f1de": {
+      "ProjectGuid": "054fd71c-eb4c-4c1f-bd08-246cc498f1de",
+      "DisplayName": "Importador",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Arquivos Diversos",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 2
+}

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="src\Components\SplitButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="src\Controller\Conexao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="src\Controller\testeConexao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="src\View\ChecarUnidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="src\View\ChecarFormaPagto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="src\View\ChecarOperacoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="src\View\Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="src\View\InserirProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
