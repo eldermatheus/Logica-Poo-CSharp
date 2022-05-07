@@ -63,6 +63,7 @@ namespace Importador
             this.btnMovEntradas = new System.Windows.Forms.RadioButton();
             this.btnMovSaidas = new System.Windows.Forms.RadioButton();
             this.btnMovAll = new System.Windows.Forms.RadioButton();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gdvProdutos)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -83,7 +84,6 @@ namespace Importador
             this.btnPorta.Name = "btnPorta";
             this.btnPorta.Size = new System.Drawing.Size(52, 23);
             this.btnPorta.TabIndex = 2;
-            this.btnPorta.Text = "5432";
             // 
             // btnBase
             // 
@@ -135,7 +135,7 @@ namespace Importador
             this.btnConectar.TabIndex = 4;
             this.btnConectar.Text = "Conectar";
             this.btnConectar.UseVisualStyleBackColor = false;
-            this.btnConectar.Click += new System.EventHandler(this.button1_Click);
+            this.btnConectar.Click += new System.EventHandler(this.Button1_Click);
             // 
             // btnImportaTxt
             // 
@@ -146,7 +146,7 @@ namespace Importador
             this.btnImportaTxt.TabIndex = 5;
             this.btnImportaTxt.Text = "Carregar TXT";
             this.btnImportaTxt.UseVisualStyleBackColor = false;
-            this.btnImportaTxt.Click += new System.EventHandler(this.btnImportaTxt_Click);
+            this.btnImportaTxt.Click += new System.EventHandler(this.BtnImportaTxt_Click);
             // 
             // btnChecaCodigo
             // 
@@ -306,7 +306,7 @@ namespace Importador
             this.btnFechar.TabIndex = 30;
             this.btnFechar.Text = "Fechar";
             this.btnFechar.UseVisualStyleBackColor = true;
-            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+            this.btnFechar.Click += new System.EventHandler(this.BtnFechar_Click);
             // 
             // btnPagamentos
             // 
@@ -428,12 +428,23 @@ namespace Importador
             this.btnMovAll.Text = "Todas";
             this.btnMovAll.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(700, 586);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(143, 47);
+            this.button1.TabIndex = 37;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1025, 640);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnOperacoes);
             this.Controls.Add(this.btnProdutos);
@@ -508,6 +519,7 @@ namespace Importador
         public RadioButton btnMovEntradas;
         public RadioButton btnMovSaidas;
         public RadioButton btnMovAll;
+        private Button button1;
     }
 }
 

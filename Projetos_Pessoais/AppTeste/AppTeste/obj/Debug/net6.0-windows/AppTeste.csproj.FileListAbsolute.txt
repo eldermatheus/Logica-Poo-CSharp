@@ -1,0 +1,17 @@
+C:\Users\USUARIO\Documents\Workspace\Projetos_Pessoais\AppTeste\AppTeste\bin\Debug\net6.0-windows\AppTeste.exe
+C:\Users\USUARIO\Documents\Workspace\Projetos_Pessoais\AppTeste\AppTeste\bin\Debug\net6.0-windows\AppTeste.deps.json
+C:\Users\USUARIO\Documents\Workspace\Projetos_Pessoais\AppTeste\AppTeste\bin\Debug\net6.0-windows\AppTeste.runtimeconfig.json
+C:\Users\USUARIO\Documents\Workspace\Projetos_Pessoais\AppTeste\AppTeste\bin\Debug\net6.0-windows\AppTeste.dll
+C:\Users\USUARIO\Documents\Workspace\Projetos_Pessoais\AppTeste\AppTeste\bin\Debug\net6.0-windows\AppTeste.pdb
+C:\Users\USUARIO\Documents\Workspace\Projetos_Pessoais\AppTeste\AppTeste\obj\Debug\net6.0-windows\AppTeste.csproj.AssemblyReference.cache
+C:\Users\USUARIO\Documents\Workspace\Projetos_Pessoais\AppTeste\AppTeste\obj\Debug\net6.0-windows\AppTeste.Form1.resources
+C:\Users\USUARIO\Documents\Workspace\Projetos_Pessoais\AppTeste\AppTeste\obj\Debug\net6.0-windows\AppTeste.csproj.GenerateResource.cache
+C:\Users\USUARIO\Documents\Workspace\Projetos_Pessoais\AppTeste\AppTeste\obj\Debug\net6.0-windows\AppTeste.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USUARIO\Documents\Workspace\Projetos_Pessoais\AppTeste\AppTeste\obj\Debug\net6.0-windows\AppTeste.AssemblyInfoInputs.cache
+C:\Users\USUARIO\Documents\Workspace\Projetos_Pessoais\AppTeste\AppTeste\obj\Debug\net6.0-windows\AppTeste.AssemblyInfo.cs
+C:\Users\USUARIO\Documents\Workspace\Projetos_Pessoais\AppTeste\AppTeste\obj\Debug\net6.0-windows\AppTeste.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\Documents\Workspace\Projetos_Pessoais\AppTeste\AppTeste\obj\Debug\net6.0-windows\AppTeste.dll
+C:\Users\USUARIO\Documents\Workspace\Projetos_Pessoais\AppTeste\AppTeste\obj\Debug\net6.0-windows\refint\AppTeste.dll
+C:\Users\USUARIO\Documents\Workspace\Projetos_Pessoais\AppTeste\AppTeste\obj\Debug\net6.0-windows\AppTeste.pdb
+C:\Users\USUARIO\Documents\Workspace\Projetos_Pessoais\AppTeste\AppTeste\obj\Debug\net6.0-windows\AppTeste.genruntimeconfig.cache
+C:\Users\USUARIO\Documents\Workspace\Projetos_Pessoais\AppTeste\AppTeste\obj\Debug\net6.0-windows\ref\AppTeste.dll

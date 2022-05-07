@@ -15,12 +15,11 @@ namespace Importador
 {
     public partial class Principal : Form
     {
-        protected static string baseDados;
-        protected static string ipServidor;
-        protected static string porta;
+        public static string baseDados;
+        public static string ipServidor;
+        public static string porta;
 
         DataTable unidades = new DataTable();
-        DataTable clientes = new DataTable();
 
         public Principal()
         {
@@ -36,7 +35,7 @@ namespace Importador
             btnOperacoes.Cms.Items[1].Click += new EventHandler(ChecarOperacoes);
         }
 
-        public void button1_Click(object sender, EventArgs e)
+        public void Button1_Click(object sender, EventArgs e)
         {
             if (btnConectar.Text.Equals("Desconectar"))
             {//Configurar para limpar dados
@@ -45,15 +44,15 @@ namespace Importador
 
             else
             {
-                Conexao conexao = new Conexao();
+                Conexao conexao = Conexao.Instance;
 
                 baseDados = btnBase.Text;
                 ipServidor = btnServidor.Text;
                 porta = btnPorta.Text;
 
-                conexao.Conectar();                
+                conexao.Conectar();
 
-                if (conexao.conectado)
+                if (Conexao.conectado)
                 {
                     btnConectar.Text = "Desconectar";
                     btnBase.Enabled = false;
@@ -81,9 +80,10 @@ namespace Importador
 
                 //gdvProdutos.DataSource = conexao.Conectar();
             }
+            
         }
 
-        private void btnFechar_Click(object sender, EventArgs e)
+        private void BtnFechar_Click(object sender, EventArgs e)
         {
             Close();
         }
@@ -114,40 +114,12 @@ namespace Importador
 
         private void Principal_Load(object sender, EventArgs e)
         {
-            /*unidades.Columns.Add("codigo", typeof(string));
-            unidades.Columns.Add("nome", typeof(string));
-
-            gdvProdutos.DataSource = unidades;
-            
-            */
-
-            /*clientes.Columns.Add("codigo", typeof(string));
-            clientes.Columns.Add("nome", typeof(string));
-            clientes.Columns.Add("pais", typeof(string));
-
-            clientes.Columns.Add("cnpj", typeof(string));
-            clientes.Columns.Add("teste1", typeof(string));
-            clientes.Columns.Add("ie", typeof(string));
-
-            clientes.Columns.Add("municipio", typeof(string));
-            clientes.Columns.Add("teste2", typeof(string));
-            clientes.Columns.Add("endereco", typeof(string));
-            clientes.Columns.Add("numero", typeof(string));
-
-            clientes.Columns.Add("complemento", typeof(string));
-            clientes.Columns.Add("bairro", typeof(string));
-
-            gdvProdutos.DataSource = clientes;*/
-
             unidades.Columns.Add("codigo", typeof(string));
             unidades.Columns.Add("descricao", typeof(string));
-            unidades.Columns.Add("cod_tabela", typeof(int));
-            
-            
 
         }
 
-        private void btnImportaTxt_Click(object sender, EventArgs e)
+        private void BtnImportaTxt_Click(object sender, EventArgs e)
         {
             OpenFileDialog abrirAquivo = new OpenFileDialog();
 
@@ -157,41 +129,47 @@ namespace Importador
                 string FileName = abrirAquivo.FileName;
                 string SafeFileName = abrirAquivo.SafeFileName;
 
+                string[] linha = File.ReadAllLines(FileName);
+                string[] coluna;
 
-                using (StreamReader sr = new StreamReader(FileName))
-
+                for (int i = 0; i < linha.Length; i++)
                 {
-                    String line = sr.ReadLine();
+                    coluna = linha[i].ToString().Split('|');
 
+                    string[] celula = new string[coluna.Length - 3];
+                    for (int j = 0; j < celula.Length; j++)
+                    {
+                        celula[j] = coluna[j + 2];
+                    }
 
-
-
+                    unidades.Rows.Add(celula);
                 }
+
+
             }
-
-
-
-
-            /*
-            string[] linha = File.ReadAllLines(@"C:\Users\elder\Desktop\teste2.txt");
-            string[] coluna;
-            
-            for (int i = 0; i < linha.Length; i++)
-            {
-                coluna = linha[i].ToString().Split('|');
-                
-                string[] celula = new string[coluna.Length - 3];
-
-                for (int j = 0; j < celula.Length; j++)
-                {
-                    celula[j] = coluna[j + 2];
-
-                }
-                
-                clientes.Rows.Add(celula);
-            }
-            */
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Conexao conexao = Conexao.Instance;
+            gdvProdutos.DataSource = conexao.Unidades();
+        }
+
+
+
+
+
+
+
+
+
+
+        /*private void Button1_Click_1(object sender, EventArgs e)
+        {
+            Conexao conexao = Conexao.Instance;
+            gdvProdutos.DataSource = conexao.Unidades();
+
+        }*/
     }
 }
 

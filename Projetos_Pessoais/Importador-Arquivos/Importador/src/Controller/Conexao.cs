@@ -16,16 +16,26 @@ namespace Importador
         static string? port = porta;*/                  // porta default
         static string userName = "matheus";           // nome do administrador
         static string password = "1234";              // senha do administrador        
-        public bool conectado = false;
-        public string stringConexao = "";
+        public static bool conectado = false;
+        public static string stringConexao = "";
+
+        private static readonly Conexao instance = new Conexao();
+
+        public static Conexao Instance 
+        { 
+            get { return instance; }
+        }
+
+        private Conexao() { 
+        }
 
         public bool Conectar()
         {
             stringConexao = String.Format(
             "Server={0};Port={1};Database={2};User Id={3};Password={4};",
-            ipServidor,
-            porta,
-            baseDados,
+            Principal.ipServidor,
+            Principal.porta,
+            Principal.baseDados,
             userName,
             password);
 
@@ -33,36 +43,35 @@ namespace Importador
             {
                 MessageBox.Show("Classe conexao: " + stringConexao);
 
-                using (NpgsqlConnection pgsqlConnection = new NpgsqlConnection(stringConexao))
+                if (Principal.porta.Equals(""))
                 {
-                    pgsqlConnection.Open();
-                    pgsqlConnection.
+                    MessageBox.Show("Informe a porta do servidor!");
                 }
-                MessageBox.Show("Conexão efetuada com sucesso");
+                else
+                {
+                    using (NpgsqlConnection pgsqlConnection = new NpgsqlConnection(stringConexao))
+                    {
+                        pgsqlConnection.Open();
+                    }
+                    MessageBox.Show("Conexão efetuada com sucesso");
 
-                conectado = true;
-
-
-                
+                    conectado = true;
+                }
             }
 
             catch (NpgsqlException)
             {
-                if (baseDados.Equals(""))
+                if (Principal.baseDados.Equals(""))
                 {
                     MessageBox.Show("Informe o nome da base!");
-                }
-                else if (porta.Equals(""))
-                {
-                    MessageBox.Show("Informe a porta do servidor!");
-                }
+                }                
                 else
                     MessageBox.Show("Não pode se conectar!");
             }
 
             catch (ArgumentException)
             {
-                if (ipServidor.Equals(""))
+                if (Principal.ipServidor.Equals(""))
                 {
                     MessageBox.Show("Informe o IP do servidor!");
                 }
@@ -70,21 +79,20 @@ namespace Importador
             return conectado;
         }
 
-        public DataTable Clientes() {
+        public DataTable Unidades() {
 
-            DataTable dtClientes = new DataTable();
+            DataTable dtUnidades = new DataTable();
 
             try
             {
                 using (NpgsqlConnection pgsqlConnection = new NpgsqlConnection(stringConexao))
-                {
-                    // abre a conexão com o PgSQL e define a instrução SQL
+                {                    
                     pgsqlConnection.Open();
                     string cmdSeleciona = "select * from clientes";
 
                     using (NpgsqlDataAdapter Adpt = new NpgsqlDataAdapter(cmdSeleciona, pgsqlConnection))
                     {
-                        Adpt.Fill(dtClientes);
+                        Adpt.Fill(dtUnidades);
                     }
                 }
             }
@@ -97,10 +105,10 @@ namespace Importador
                 throw ex;
             }
             
-            return dtClientes;
+            return dtUnidades;
         }
 
-        public DataTable Unidades()
+      /*  public DataTable Unidades()
         {
             return dtUnidades;
         }
@@ -119,7 +127,7 @@ namespace Importador
         public DataTable Saidas()
         {
             return dtSaidas;
-        }
+        }*/
 
     }
 }
